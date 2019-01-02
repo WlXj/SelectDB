@@ -1,0 +1,200 @@
+﻿@{
+    Layout = null;
+    ViewBag.Title = "Home Page";
+}
+@Scripts.Render("~/Scripts/echarts.js")
+@Scripts.Render("~/Scripts/vintage.js")
+<div class="row">
+    <div class="">
+        <select class="container-fluid selectpicker" id="mySelect">
+            <option value="0">请选择</option>
+            <option value="1">按周选择</option>
+            <option value="2">按月选择</option>
+            <option value="3">按年选择</option>
+        </select>
+        <select class="selectpicker" id="selChiled">
+            <option value="1">请选择</option>
+        </select>
+        <div class="container-fluid">
+            <div id="home" style="height: 600px"></div>
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var lineChart = echarts.init(document.getElementById('home'), 'vintage');
+        //测试数据
+        
+        //周，月，年选择
+        var erWeek = [
+            [''],
+            ['近3周', '近5周', '近10周'],
+            ['']
+        ];
+        var erMonths = [
+            [''],
+            [''],
+            ['近3月', '近5月', '近10月']
+        ];
+        var erYears = [
+            [''],
+            [''],
+            [''],
+            ['近3年', '近5年', '近10年']
+        ];
+        //选择值
+        var erChange = '<li data-original-index="-1" class>' +     // 字符串拼接
+            '<a tabindex="0" data-tokens="null" role="option" aria-disabled="false" aria-selected="false">' +
+            '<span class="text">请选择</span>' +
+            '<span class="glyphicon glyphicon-ok check-mark"></span>' +
+            '</a>' +
+            '</li>';
+        var xData = [];
+        var yData = [];
+        Fo(0);
+        chartsfun();
+        //二级联动
+        $("#mySelect").on('change', function () {
+            var allIndex;
+
+            $('#selChiled').prev('div.dropdown-menu').find('ul').html(erChange);
+            $('#selChiled').html('<option>请选择</option>');
+            //$('.selectpicker').selectpicker('refresh');
+            if ($(this).val() === '1') {
+                allIndex = erWeek[this.value];
+
+            }
+            else if ($(this).val() === '2') {
+                allIndex = erMonths[this.value];
+
+            }
+            else if ($(this).val() === '3') {
+                allIndex = erYears[this.value];
+            }
+            else {
+                return;
+            }
+
+            var html = '<li data-original-index="-1" class>' +
+                '<a tabindex="0" data-tokens="null" role="option" aria-disabled="false" aria-selected="false">' +
+                '<span class="text">请选择</span>' +
+                '<span class="glyphicon glyphicon-ok check-mark"></span>' +
+                '</a>' +
+                '</li>';
+            var weekOption = '<option value="0">请选择</option>';
+            for (var i = 0; i < allIndex.length; i++) {
+                html += '<li data-original-index=' + i + '>' +
+                    '<a tabindex="0" data-tokens="null" role="option" aria-disabled="false" aria-selected="false">' +
+                    '<span class="text">' + allIndex[i] + '</span>' +
+                    '<span class="glyphicon glyphicon-ok check-mark"></span>' +
+                    '</a>' +
+                    '</li>';
+                // 添加option
+                weekOption += '<option value=' + i + '>' + allIndex[i] + '</option>';
+            }
+            $('#selChiled').prev('div.dropdown-menu').find('ul').html(html);
+            $('#selChiled').html(weekOption);
+            //$('.selectpicker').selectpicker('refresh');
+        })
+
+        $("#selChiled").on('change', function () {
+            var val = $(this).val();
+            xData = [];
+            yData = [];
+            Fo(val);
+            chartsfun();
+        })
+        //echarts 图像
+        function chartsfun() {
+            charts = {
+                title: {
+                    text: '用户活跃度',
+                    subtext: ''
+                },
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                        type: 'cross'
+                    }
+                },
+                toolbox: {
+                    show: true,
+                    feature: {
+                        saveAsImage: {}
+                    }
+                },
+                xAxis: {
+
+                    type: 'category',
+                    boundaryGap: false,
+                    data: xData
+
+                },
+                yAxis: {
+
+                    type: 'value',
+                    axisLabel: {
+                        formatter: '{value} 次'
+                    },
+                    axisPointer: {
+                        snap: true
+                    }
+                },
+                visualMap: {
+                    show: false,
+                    dimension: 0,
+                    pieces: [{
+                        lte: 6,
+                        color: 'green'
+                    }, {
+                        gt: 6,
+                        lte: 8,
+                        color: 'green'
+                    }, {
+                        gt: 17,
+                        color: 'green'
+                    }]
+                },
+                series: [
+
+                    {
+                        name: '登录次数',
+                        type: 'line',
+                        smooth: true,
+                        data: yData,
+                    }
+                ]
+            };
+            lineChart.setOption(charts);
+            window.onresize = lineChart.resize;
+        }
+
+        function Fo(val) {
+            $.ajax({
+                type:"POST",
+                url: "Home/GetAllUser",
+                success: function (res) {
+                    //for (var i = 0; i < 6 - val; i++) {
+                    //    xData.push(res.rows[i].by_value.slice(5));
+                    //}
+                    //for (var n = 0, m = val; n < 6 - val; n++) {
+                    //    yData.push(res.rows[n].cells[m].people);
+                    //}
+
+                    //for (var i = 0; i < 5 - val; i++) {
+                    //    xData.push ( res[i].LonDate);
+                       
+                    //}
+                    //for (var n = 1, m = val; n < 5 - val; n++) {
+                    //    yData.push(res[n].LonCount[m].people);
+                    //}
+                }
+
+            })
+            
+        }
+    });
+</script>
+

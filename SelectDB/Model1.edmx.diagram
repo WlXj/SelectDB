@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="24ffdffc4eef4163b9784432045cb5ed" Name="Diagram1">
+        <EntityTypeShape EntityType="NxShufWebModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.AbpAuditLogs" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.AbpBackgroundJobs" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.AbpEditions" Width="1.5" PointX="3.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.AbpFeatures" Width="1.5" PointX="6" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.AbpLanguages" Width="1.5" PointX="10.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.AbpLanguageTexts" Width="1.5" PointX="8.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.AbpNotifications" Width="1.5" PointX="10.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.AbpNotificationSubscriptions" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.AbpOrganizationUnits" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.AbpPermissions" Width="1.5" PointX="5.25" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.AbpRoles" Width="1.5" PointX="3" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.AbpSettings" Width="1.5" PointX="3" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.AbpTenantNotifications" Width="1.5" PointX="12.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.AbpTenants" Width="1.5" PointX="6" PointY="21.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.AbpUserAccounts" Width="1.5" PointX="12.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.AbpUserClaims" Width="1.5" PointX="3" PointY="24.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.AbpUserLoginAttempts" Width="1.5" PointX="13.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.AbpUserLogins" Width="1.5" PointX="3" PointY="27.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.AbpUserNotifications" Width="1.5" PointX="12.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.AbpUserOrganizationUnits" Width="1.5" PointX="14.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.AbpUserRoles" Width="1.5" PointX="3" PointY="30.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.AbpUsers" Width="1.5" PointX="0.75" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.Areas" Width="1.5" PointX="7.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.Cities" Width="1.5" PointX="14.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.Provinces" Width="1.5" PointX="9.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.SFClasses" Width="1.5" PointX="5.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.SFCourses" Width="1.5" PointX="14.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.SFDirectors" Width="1.5" PointX="3" PointY="33.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.SFGenres" Width="1.5" PointX="15.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.SFHistoryTeachings" Width="1.5" PointX="14.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.SFMetaFiles" Width="1.5" PointX="16.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.SFMetaTags" Width="1.5" PointX="16.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.SFPackFiles" Width="1.5" PointX="16.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.SFPackFileSFMetaFiles" Width="1.5" PointX="11.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.SFPackParentTags" Width="1.5" PointX="16.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.SFPackTags" Width="1.5" PointX="17.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.SFParts" Width="1.5" PointX="7.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.SFPartSpecs" Width="1.5" PointX="16.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.SFPrincipals" Width="1.5" PointX="3" PointY="37.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.SFSchools" Width="1.5" PointX="2.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.SFSellers" Width="1.5" PointX="3" PointY="40.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.SFStudents" Width="1.5" PointX="8" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.SFTeachers" Width="1.5" PointX="5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.SFTempFiles" Width="1.5" PointX="18.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.SFUpdates" Width="1.5" PointX="18.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.SFWordMeanings" Width="1.5" PointX="18.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.SFWordPictures" Width="1.5" PointX="13.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.SFWordPronounces" Width="1.5" PointX="18.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.SFWriteSpecs" Width="1.5" PointX="18.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NxShufWebModel.SFWords" Width="1.5" PointX="9.75" PointY="19.75" IsExpanded="true" />
+        <AssociationConnector Association="NxShufWebModel.FK_dbo_AbpFeatures_dbo_AbpEditions_EditionId" ManuallyRouted="false" />
+        <AssociationConnector Association="NxShufWebModel.FK_dbo_AbpTenants_dbo_AbpEditions_EditionId" ManuallyRouted="false" />
+        <AssociationConnector Association="NxShufWebModel.FK_dbo_AbpOrganizationUnits_dbo_AbpOrganizationUnits_ParentId" ManuallyRouted="false" />
+        <AssociationConnector Association="NxShufWebModel.FK_dbo_AbpPermissions_dbo_AbpRoles_RoleId" ManuallyRouted="false" />
+        <AssociationConnector Association="NxShufWebModel.FK_dbo_AbpPermissions_dbo_AbpUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="NxShufWebModel.FK_dbo_AbpRoles_dbo_AbpUsers_CreatorUserId" ManuallyRouted="false" />
+        <AssociationConnector Association="NxShufWebModel.FK_dbo_AbpRoles_dbo_AbpUsers_DeleterUserId" ManuallyRouted="false" />
+        <AssociationConnector Association="NxShufWebModel.FK_dbo_AbpRoles_dbo_AbpUsers_LastModifierUserId" ManuallyRouted="false" />
+        <AssociationConnector Association="NxShufWebModel.FK_dbo_AbpSettings_dbo_AbpUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="NxShufWebModel.FK_dbo_AbpTenants_dbo_AbpUsers_CreatorUserId" ManuallyRouted="false" />
+        <AssociationConnector Association="NxShufWebModel.FK_dbo_AbpTenants_dbo_AbpUsers_DeleterUserId" ManuallyRouted="false" />
+        <AssociationConnector Association="NxShufWebModel.FK_dbo_AbpTenants_dbo_AbpUsers_LastModifierUserId" ManuallyRouted="false" />
+        <AssociationConnector Association="NxShufWebModel.FK_dbo_AbpUserClaims_dbo_AbpUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="NxShufWebModel.FK_dbo_AbpUserLogins_dbo_AbpUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="NxShufWebModel.FK_dbo_AbpUserRoles_dbo_AbpUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="NxShufWebModel.FK_dbo_AbpUsers_dbo_AbpUsers_CreatorUserId" ManuallyRouted="false" />
+        <AssociationConnector Association="NxShufWebModel.FK_dbo_AbpUsers_dbo_AbpUsers_DeleterUserId" ManuallyRouted="false" />
+        <AssociationConnector Association="NxShufWebModel.FK_dbo_AbpUsers_dbo_AbpUsers_LastModifierUserId" ManuallyRouted="false" />
+        <AssociationConnector Association="NxShufWebModel.FK_dbo_SFDirectors_dbo_AbpUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="NxShufWebModel.FK_dbo_SFPrincipals_dbo_AbpUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="NxShufWebModel.FK_dbo_SFSellers_dbo_AbpUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="NxShufWebModel.FK_dbo_SFTeachers_dbo_SFSchools_SchoolId" ManuallyRouted="false" />
+        <AssociationConnector Association="NxShufWebModel.SFClassStudent" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="NxShufWebModel.SFUserActivity" Width="1.5" PointX="20.375" PointY="0.75" />
+        <EntityTypeShape EntityType="NxShufWebModel.sysdiagrams" Width="1.5" PointX="21.375" PointY="3.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
